@@ -50,6 +50,13 @@
       <td><button id="Eq">=</button></td>
     </tr>
   </table>
-    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      function draw(smth){
+        $('#out').html(smth);
+      }
+      $('#ON/C').on('click',draw('0'));
+      $('#OFF').on('click',draw(''));
+    </script>
   </body>
 </html>
