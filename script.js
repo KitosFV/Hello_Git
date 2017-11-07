@@ -1,31 +1,22 @@
 var mem = 0;
 var disp = 0;
-var eq =[];
+var eq = [];
+var ans = 0;
 
-function CE(){
-  disp=0;
+function display(eq){//displays result on "screen"
+  disp=eq;
   document.getElementById("display").innerHTML=disp;
 }
 
-function MRC(){
-  mem=0;
+function solve(a){
+
 }
 
-function MR(){
-  disp=mem;
-  document.getElementById("display").innerHTML=disp;
+function pressCount(a){
+  display((disp*10)+a);
 }
 
-function MP(){
-  mem+=disp;
-}
-
-function MM(){
-  mem-=disp;
-}
-
-function press(a){
-  disp*=10;
-  disp+=a;
-  document.getElementById("display").innerHTML=disp;
+function pressOp(a){
+  eq.push(a);
+  solve(eq);
 }

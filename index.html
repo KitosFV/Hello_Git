@@ -17,39 +17,39 @@
       <p id="display" class="displ"></p>
       <table>
         <tr>
-          <td><button id="MRC" onmousedown="MRC()">MRC</button></td>
-          <td><button id="M-" onmousedown="MM()">M-</button></td>
-          <td><button id="M+" onmousedown="MP()">M+</button></td>
-          <td><button id="MR" onmousedown="MR()">MR</button></td>
-          <td><button id="CE" onmousedown="CE()">CE</button></td>
+          <td><button id="MRC" onmousedown="mem=0">MRC</button></td>
+          <td><button id="M-" onmousedown="mem-=disp;">M-</button></td>
+          <td><button id="M+" onmousedown="mem+=disp;">M+</button></td>
+          <td><button id="MR" onmousedown="display(mem);">MR</button></td>
+          <td><button id="CE" onmousedown="display(0)">CE</button></td>
         </tr>
         <tr>
-          <td><button id="Num7" onmousedown="press(7)">7</button></td>
-          <td><button id="Num8" onmousedown="press(8)">8</button></td>
-          <td><button id="Num9" onmousedown="press(9)">9</button></td>
-          <td><button id="Mod">%</button></td>
-          <td><button id="Sqrt">√</button></td>
+          <td><button id="Num7" onmousedown="pressCount(7)">7</button></td>
+          <td><button id="Num8" onmousedown="pressCount(8)">8</button></td>
+          <td><button id="Num9" onmousedown="pressCount(9)">9</button></td>
+          <td><button id="Mod" onmousedown="pressOp('mod')">%</button></td>
+          <td><button id="Sqrt" onmousedown="pressOp('sqrt')">√</button></td>
         </tr>
         <tr>
-          <td><button id="Num4" onmousedown="press(4)">4</button></td>
-          <td><button id="Num5" onmousedown="press(5)">5</button></td>
-          <td><button id="Num6" onmousedown="press(6)">6</button></td>
-          <td><button id="Mul">*</button></td>
-          <td><button id="Div">/</button></td>
+          <td><button id="Num4" onmousedown="pressCount(4)">4</button></td>
+          <td><button id="Num5" onmousedown="pressCount(5)">5</button></td>
+          <td><button id="Num6" onmousedown="pressCount(6)">6</button></td>
+          <td><button id="Mul" onmousedown="pressOp('*')">*</button></td>
+          <td><button id="Div" onmousedown="pressOp('/')">/</button></td>
         </tr>
         <tr>
-          <td><button id="Num1" onmousedown="press(1)">1</button></td>
-          <td><button id="Num2" onmousedown="press(2)">2</button></td>
-          <td><button id="Num3" onmousedown="press(3)">3</button></td>
-          <td><button id="Pls">+</button></td>
-          <td><button id="Mns">-</button></td>
+          <td><button id="Num1" onmousedown="pressCount(1)">1</button></td>
+          <td><button id="Num2" onmousedown="pressCount(2)">2</button></td>
+          <td><button id="Num3" onmousedown="pressCount(3)">3</button></td>
+          <td><button id="Pls" onmousedown="pressOp('+')">+</button></td>
+          <td><button id="Mns" onmousedown="pressOp('-')">-</button></td>
         </tr>
         <tr>
-          <td><button id="Num0" onmousedown="press(0)">0</button></td>
+          <td><button id="Num0" onmousedown="pressCount(0)">0</button></td>
           <td><button id="dot">.</button></td>
           <td><button id="p/m">+/-</button></td>
           <td><button id="Ans">Ans</button></td>
-          <td><button id="Eq">=</button></td>
+          <td><button id="Eq" onmousedown="pressOp('=')">=</button></td>
         </tr>
       </table>
     </div>
