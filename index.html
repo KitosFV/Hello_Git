@@ -5,58 +5,53 @@
     <title>Calculator</title>
   </head>
   <body>
+    <script src="script.js"></script>
     <style>
-    .brd {
+    .displ{
       border: 4px solid;
       padding: 10px;
       width: 280px;
     }
     </style>
-    <p id="Out" class="brd"></p>
-  <table>
-    <tr>
-      <td><button id="MRC">MRC</button></td>
-      <td><button id="M-">M-</button></td>
-      <td><button id="M+">M+</button></td>
-      <td><button id="ON/C">ON/C</button></td>
-      <td><button id="OFF">OFF</button></td>
-    </tr>
-    <tr>
-      <td><button id="Num7">7</button></td>
-      <td><button id="Num8">8</button></td>
-      <td><button id="Num9">9</button></td>
-      <td><button id="Mod">%</button></td>
-      <td><button id="Sqrt">√</button></td>
-    </tr>
-    <tr>
-      <td><button id="Num4">4</button></td>
-      <td><button id="Num5">5</button></td>
-      <td><button id="Num6">6</button></td>
-      <td><button id="Mul">*</button></td>
-      <td><button id="Div">/</button></td>
-    </tr>
-    <tr>
-      <td><button id="Num1">1</button></td>
-      <td><button id="Num2">2</button></td>
-      <td><button id="Num3">3</button></td>
-      <td><button id="Pls">+</button></td>
-      <td><button id="Mns">-</button></td>
-    </tr>
-    <tr>
-      <td><button id="Num0">0</button></td>
-      <td><button id="dot">.</button></td>
-      <td><button id="p/m">+/-</button></td>
-      <td><button id="Ans">Ans</button></td>
-      <td><button id="Eq">=</button></td>
-    </tr>
-  </table>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script>
-      function draw(smth){
-        $('#out').html(smth);
-      }
-      $('#ON/C').on('click',draw('0'));
-      $('#OFF').on('click',draw(''));
-    </script>
+    <div>
+      <p id="display" class="displ"></p>
+      <table>
+        <tr>
+          <td><button id="MRC" onmousedown="MRC()">MRC</button></td>
+          <td><button id="M-" onmousedown="MM()">M-</button></td>
+          <td><button id="M+" onmousedown="MP()">M+</button></td>
+          <td><button id="MR" onmousedown="MR()">MR</button></td>
+          <td><button id="CE" onmousedown="CE()">CE</button></td>
+        </tr>
+        <tr>
+          <td><button id="Num7" onmousedown="press(7)">7</button></td>
+          <td><button id="Num8" onmousedown="press(8)">8</button></td>
+          <td><button id="Num9" onmousedown="press(9)">9</button></td>
+          <td><button id="Mod">%</button></td>
+          <td><button id="Sqrt">√</button></td>
+        </tr>
+        <tr>
+          <td><button id="Num4" onmousedown="press(4)">4</button></td>
+          <td><button id="Num5" onmousedown="press(5)">5</button></td>
+          <td><button id="Num6" onmousedown="press(6)">6</button></td>
+          <td><button id="Mul">*</button></td>
+          <td><button id="Div">/</button></td>
+        </tr>
+        <tr>
+          <td><button id="Num1" onmousedown="press(1)">1</button></td>
+          <td><button id="Num2" onmousedown="press(2)">2</button></td>
+          <td><button id="Num3" onmousedown="press(3)">3</button></td>
+          <td><button id="Pls">+</button></td>
+          <td><button id="Mns">-</button></td>
+        </tr>
+        <tr>
+          <td><button id="Num0" onmousedown="press(0)">0</button></td>
+          <td><button id="dot">.</button></td>
+          <td><button id="p/m">+/-</button></td>
+          <td><button id="Ans">Ans</button></td>
+          <td><button id="Eq">=</button></td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
