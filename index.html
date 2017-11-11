@@ -9,19 +9,16 @@
     <style>
     .displ{
       border: 4px solid;
-      padding: 10px;
-      width: 280px;
     }
     </style>
-    <div>
-      <p id="display" class="displ"></p>
-      <table>
+	<p id="display" class="displ"></p>
+        <table>
         <tr>
-          <td><button id="MRC" onmousedown="mem=0">MRC</button></td>
-          <td><button id="M-" onmousedown="mem-=disp;">M-</button></td>
-          <td><button id="M+" onmousedown="mem+=disp;">M+</button></td>
+          <td><button id="MRC" onmousedown="mem=0;display(0)">MRC</button></td>
+          <td><button id="M-" onmousedown="mem-=disp;display(0)">M-</button></td>
+          <td><button id="M+" onmousedown="mem+=disp;display(0)">M+</button></td>
           <td><button id="MR" onmousedown="display(mem);">MR</button></td>
-          <td><button id="CE" onmousedown="display(0)">CE</button></td>
+          <td><button id="CE" onmousedown="display(0);eq=[];ad=-1">CE</button></td>
         </tr>
         <tr>
           <td><button id="Num7" onmousedown="pressCount(7)">7</button></td>
@@ -46,9 +43,9 @@
         </tr>
         <tr>
           <td><button id="Num0" onmousedown="pressCount(0)">0</button></td>
-          <td><button id="dot">.</button></td>
-          <td><button id="p/m">+/-</button></td>
-          <td><button id="Ans">Ans</button></td>
+          <td><button id="dot" onmousedown="pressOp('dot')">.</button></td>
+          <td><button id="p/m" onmousedown="pressOp('pm')">+/-</button></td>
+          <td><button id="Ans" onmousedown="display(ans)"">Ans</button></td>
           <td><button id="Eq" onmousedown="pressOp('=')">=</button></td>
         </tr>
       </table>
