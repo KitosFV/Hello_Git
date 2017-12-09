@@ -1,2 +1,2 @@
-# This is simple calculator wroted in JS with using of HTML
+# This is simple calculator writen in JS using HTML
 
